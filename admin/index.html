@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Login - SeasonedCFO</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style-admin.css">
+</head>
+
+<body>
+
+  <div class="login-box">
+    <h2>SeasonedCFO</h2>
+    <p>Admin Access</p>
+
+    <input type="text" id="user" placeholder="Username" required>
+    <input type="password" id="pass" placeholder="Password" required>
+
+    <button onclick="login()">Login</button>
+
+    <div class="error" id="error"></div>
+  </div>
+
+  <script>
+    const USER = "dharmeshleo@gmail.com";
+    const PASS = "Dpainter@1978";
+
+    function login() {
+      let u = document.getElementById("user").value.trim();
+      let p = document.getElementById("pass").value.trim();
+      let error = document.getElementById("error");
+
+      if (u === "" || p === "") {
+        error.innerText = "Please fill all fields";
+        return;
+      }
+
+      if (u === USER && p === PASS) {
+        localStorage.setItem("admin", "true");
+        window.location.href = "/";
+      } else {
+        error.innerText = "Invalid username or password";
+      }
+    }
+  </script>
+
+</body>
+
+</html>

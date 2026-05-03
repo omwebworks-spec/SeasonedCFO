@@ -1,0 +1,59 @@
+* {margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif;}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(11,60,93,0.9), rgba(11,60,93,0.9)), url('/images/login-bg.jpg') center/cover no-repeat;
+}
+
+/* Login Card */
+.login-box {
+  background: #fff;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* Title */
+.login-box h2 {color: #0A2F6B; margin-bottom: 10px;}
+
+.login-box p {font-size: 14px; color: #666; margin-bottom: 20px;}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+input:focus {border-color: #0A2F6B; outline: none;}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1E73BE; /* main theme color */
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover */
+button:hover {background: #0A2F6B;}
+
+/* Optional: slight click effect */
+button:active {transform: scale(0.98);}
+
+/* Error */
+.error {color: red; font-size: 14px; margin-top: 10px;}
